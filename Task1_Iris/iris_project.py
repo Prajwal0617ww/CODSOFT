@@ -6,20 +6,17 @@ from sklearn.linear_model import LogisticRegression
 df = pd.read_csv("iris.csv")
 print("Dataset Loaded Successfully")
 
-# just checking some rows
+# just checking some rows to get idea of dataset
 # print(df.head())
 
 # taking input and output
-# X means input values
-# y means output (flower name)
 X = df.drop("species", axis=1)
 y = df["species"]
 
-# converting text into numbers so computer understand
+# converting text into numbers
 y = y.astype('category').cat.codes
 
 # splitting data into train and test
-# 80% for learning, 20% for testing
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # making model
