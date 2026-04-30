@@ -31,4 +31,4 @@ y_pred = model.predict(X_test)
 # checking accuracy
 acc = model.score(X_test, y_test)
 print("Accuracy:", acc)
-      
+
